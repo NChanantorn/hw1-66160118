@@ -179,10 +179,10 @@ img {
 }
 
 .highlight-container {
-    display: flex; /* ใช้ Flexbox จัดเรียง */
-    justify-content: center; /* จัดวางให้อยู่กึ่งกลาง */
-    gap: 20px; /* ระยะห่างระหว่างแต่ละ article */
+    display: flex; /* ใช้ Flexbox */
     flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+    justify-content: center; /* จัดวางให้อยู่ตรงกลาง */
+    gap: 20px; /* ระยะห่างระหว่างการ์ด */
 }
 
 .highlight-item {
@@ -190,9 +190,11 @@ img {
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 300px; /* กำหนดความกว้างคงที่ */
+    width: calc(33.33% - 40px); /* กว้าง 33.33% ของพื้นที่, หัก gap 20px สองด้าน */
+    max-width: 300px; /* กำหนดความกว้างสูงสุดของการ์ด */
     overflow: hidden; /* ป้องกันขอบภาพเกิน */
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .highlight-item img {
@@ -243,6 +245,9 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
 }
+
+
+
 
 /* Section บทนำ (Intro) */
 .intro {
@@ -316,34 +321,38 @@ footer {
 
 /* Container หลัก */
 .destination-container {
-    display: flex; /* ใช้ Flexbox จัดเรียง */
-    justify-content: center; /* จัดให้อยู่ตรงกลาง */
-    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+    display: grid; /* ใช้ CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* แบ่งเป็น 3 คอลัมน์เท่ากัน */
     gap: 20px; /* ระยะห่างระหว่างการ์ด */
+    justify-items: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    margin: 20px auto; /* จัดกึ่งกลางและเพิ่มระยะห่างจากด้านบน */
+    max-width: 1200px; /* จำกัดความกว้างสูงสุด */
 }
 
 /* การ์ดแต่ละใบ */
 .destination-item {
-    background-color: #ffffff;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาเบาๆ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    width: 300px; /* กำหนดความกว้างคงที่ของการ์ด */
     text-align: center;
+    width: 100%; /* ใช้พื้นที่เต็ม Grid */
+    max-width: 300px; /* กำหนดความกว้างสูงสุด */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .destination-item:hover {
-    transform: translateY(-5px); /* ยกขึ้นเล็กน้อยเมื่อ hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /* เพิ่มเอฟเฟกต์ยกขึ้นเมื่อ hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* รูปภาพภายในการ์ด */
 .destination-item img {
-    width: 100%; /* ปรับความกว้างของรูปภาพให้เต็มการ์ด */
-    height: 180px; /* กำหนดความสูงของรูปภาพ */
-    object-fit: cover; /* ทำให้รูปภาพพอดีและไม่เสียสัดส่วน */
-    border-radius: 8px 8px 0 0; /* ขอบบนรูปภาพโค้งมน */
+    width: 100%;
+    height: 180px; /* ความสูงคงที่ */
+    object-fit: cover; /* ทำให้รูปภาพไม่เสียสัดส่วน */
+
 }
 
 .destination-item h3 {
@@ -357,6 +366,20 @@ footer {
     font-size: 0.9rem;
     padding: 0 10px 15px;
 }
+
+@media screen and (max-width: 992px) {
+    .destination-container {
+        grid-template-columns: repeat(2, 1fr); /* แสดง 2 การ์ดต่อแถว */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .destination-container {
+        grid-template-columns: 1fr; /* แสดง 1 การ์ดต่อแถว */
+    }
+}
+
+
 
 
 
