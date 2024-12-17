@@ -16,32 +16,38 @@ header {
     padding: 10px 20px;
 }
 
+/* จัด Header ของแต่ละ Section ให้มีระยะห่างและชิดซ้าย */
+main h1, main h2 {
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+    margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
+    padding-left: 20px; /* เพิ่ม Padding ด้านซ้าย */
+}
+
 /* Navigation Bar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+nav {
+    padding-top: 10px; /* เพิ่ม Padding ด้านบน */
+    padding-bottom: 10px; /* เพิ่ม Padding ด้านล่าง */
 }
 
-.nav-list {
+.navbar ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    display: flex; /* แสดงเป็นแนวนอน */
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
 }
 
-.nav-list li {
-    margin-left: 20px;
-}
-
-.nav-list a {
+.navbar ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 10px 15px; /* เพิ่มระยะห่างภายในลิงก์ */
+    display: inline-block;
 }
 
-.nav-list a:hover {
+.navbar ul li a:hover {
     text-decoration: underline;
+    background-color: #0055a5; /* เปลี่ยนสีพื้นหลังเมื่อ Hover */
+    border-radius: 4px; /* มุมโค้งมน */
 }
 
 /* Hamburger Menu Icon */
@@ -448,3 +454,4 @@ footer {
     margin-top: auto;
     width: 100%;
 }
+
