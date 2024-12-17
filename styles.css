@@ -23,30 +23,18 @@ main h1, main h2 {
     padding-left: 20px; /* เพิ่ม Padding ด้านซ้าย */
 }
 
-/* Navigation Bar */
-nav {
-    padding-top: 10px; /* เพิ่ม Padding ด้านบน */
-    padding-bottom: 10px; /* เพิ่ม Padding ด้านล่าง */
-}
-
-.navbar ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center; /* จัดให้อยู่ตรงกลาง */
-}
-
-.navbar ul li a {
+/* Navigation Menu */
+nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px; /* เพิ่มระยะห่างภายในลิงก์ */
-    display: inline-block;
+    font-weight: bold;
+    padding: 10px 15px; /* เพิ่ม Padding ด้านบน-ล่าง และซ้าย-ขวา */
+    display: inline-block; /* ให้ Padding ทำงานได้กับลิงก์ */
+    transition: background-color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    text-decoration: underline;
-    background-color: #0055a5; /* เปลี่ยนสีพื้นหลังเมื่อ Hover */
+nav ul li a:hover {
+    background-color: #0055a5; /* เพิ่มสีพื้นหลังเมื่อ Hover */
     border-radius: 4px; /* มุมโค้งมน */
 }
 
@@ -103,12 +91,15 @@ main {
     background-color: #f4f4f4; /* สีพื้นหลังของเนื้อหาหลัก */
 }
 
-/* Header */
+/* Header ทั่วไป */
 header {
     background-color: #003366; /* สีน้ำเงินเข้ม */
-    color: white;
-    padding: 10px 0;
+    color: white; /* สีข้อความ */
     text-align: center;
+    padding: 20px 0; /* เพิ่ม Padding ด้านบน-ล่าง */
+    width: 100%; /* กำหนดความกว้างเต็มจอ */
+    margin: 0; /* ไม่ให้มี Margin ด้านนอก */
+    box-sizing: border-box; /* รวม Padding และ Border ไว้ในความกว้าง */
 }
 
 header nav ul {
