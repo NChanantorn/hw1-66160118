@@ -1,2 +1,38 @@
 # hw1-66160118
 - ทดสอบ
+git command ที่ใช้ในโปรเจกต์ มีดังนี้
+- git add README.md
+- git commit -m "comment"
+- git push
+- git add .
+- git commit -m "สร้างโครงสร้างโปรเจคเริ่มต้น"
+- git checkout -b feature/homepage
+- git commit -m "เพิ่มหน้าแรกของเว็บไซต์"
+- git add destinations.html
+- git commit -m "เพิ่มหน้ารายละเอียดสถานที่ท่องเที่ยว"
+- git checkout -b feature/contact-form
+- git add contact.html
+- git commit -m "เพิ่มฟอร์มหน้าติดต่อในหน้า contact"
+- git add .
+- git add index.html
+- git add contact.html
+- git add destinations.html
+- git commit -m "เพิ่มการเชื่อมต่อไปยังหน้าต่างๆ"
+- git add styles.css
+- git commit -m "เพิ่มการตกแต่งและจัดเรียงหน้าเว็บ"
+- git add images
+- git commit -m "เพิ่มไฟล์สำหรับ รูปภาพ"
+- git add index.html
+- git commit -m "เพิ่มการตกแต่งและปรับปรุง"
+- git commit -m "ทำ hamburger menu"
+- git commit -m "ตกแต่งใน styles เกี่ยวระยะห่างของ header"
+- git commit -m "เพิ่ม Padding ให้ข้อความใน Navigation Menu ห่างด้านบนและล่าง"
+- git commit -m "จัดเรียงสถานที่ท่องเที่ยวใน destination ให้แสดงแถวละ 3 ใบ"
+- git add .
+- git commit -m "โปรเจกต์เสร็จสมบูรณ์: เว็บแนะนำสถานที่ท่องเที่ยว"
+- git checkout development
+- git merge feature/contact-form
+- git merge feature/destinations
+- git merge feature/homepage
+- git push origin development
+
