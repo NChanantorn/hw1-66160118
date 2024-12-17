@@ -1,14 +1,12 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
+header, footer {
+    background-color: #003366;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -30,20 +28,164 @@ nav ul li a {
 }
 
 main {
-    padding: 2rem;
+    padding: 20px;
+}
+
+section.intro {
+    background-color: #e9e9e9;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section.highlights article {
+    margin-bottom: 20px;
 }
 
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin-bottom: 10px;
 }
 
-footer {
+/* ส่วนที่เที่ยวแนะนำ */
+.highlights {
     text-align: center;
-    background-color: #333;
+    margin: 20px;
+}
+
+.highlight-container {
+    display: flex; /* ใช้ Flexbox จัดเรียง */
+    justify-content: center; /* จัดวางให้อยู่กึ่งกลาง */
+    gap: 20px; /* ระยะห่างระหว่างแต่ละ article */
+    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+}
+
+.highlight-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px; /* กำหนดความกว้างคงที่ */
+    overflow: hidden; /* ป้องกันขอบภาพเกิน */
+    text-align: center;
+}
+
+.highlight-item img {
+    width: 100%; /* ทำให้รูปเต็มพื้นที่ของ container */
+    height: 200px; /* กำหนดความสูงคงที่ */
+    object-fit: cover; /* ครอบคลุมพื้นที่โดยไม่เสียสัดส่วน */
+}
+
+.highlight-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.highlight-item p {
+    padding: 0 10px 10px;
+    font-size: 0.9rem;
+    color: #666;
+}
+/* สีพื้นหลังหลัก */
+body {
+    background-color: #f9f9f9; /* สีเทาอ่อน */
+    color: #333; /* สีข้อความ */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header และ Navbar */
+header {
+    background-color: #003366; /* สีน้ำเงินเข้ม */
     color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section บทนำ (Intro) */
+.intro {
+    background-color: #ffffff; /* สีขาว */
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section ที่เที่ยวแนะนำ */
+.highlights {
+    background-color: #eef5ff; /* พื้นหลังสีฟ้าอ่อน */
+    padding: 40px 20px; /* เพิ่มระยะห่างด้านใน */
+    border-radius: 8px; /* ขอบมน */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* เงาเบาๆ */
+    margin: 20px 0; /* ระยะห่างด้านบนและด้านล่าง */
+}
+
+.highlight-container {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    gap: 30px; /* ระยะห่างระหว่างการ์ด */
+    flex-wrap: wrap; /* ขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+}
+
+.highlight-item {
+    background-color: #ffffff; /* สีพื้นหลังของการ์ด */
+    border-radius: 12px; /* ขอบมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* เพิ่มเงาเพื่อความเด่น */
+    overflow: hidden; /* ป้องกันรูปภาพเกินขอบ */
+    width: 300px; /* ความกว้างของการ์ด */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่มเอฟเฟกต์ */
+}
+
+.highlight-item:hover {
+    transform: translateY(-5px); /* ยกการ์ดขึ้นเล็กน้อยเมื่อชี้เมาส์ */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ hover */
+}
+
+.highlight-item img {
+    width: 100%; /* รูปภาพเต็มความกว้างของการ์ด */
+    height: 180px; /* ความสูงคงที่ */
+    object-fit: cover; /* ปรับรูปให้พอดีและไม่เสียสัดส่วน */
+    border-radius: 12px 12px 0 0; /* มุมบนรูปภาพโค้งมน */
+}
+
+.highlight-item h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.highlight-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0 10px 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #003366; /* สีน้ำเงินเข้ม */
+    color: white;
+    text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
 }
