@@ -189,3 +189,47 @@ footer {
     padding: 1rem 0;
     margin-top: 20px;
 }
+
+/* Container หลัก */
+.destination-container {
+    display: flex; /* ใช้ Flexbox จัดเรียง */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    flex-wrap: wrap; /* ให้ขึ้นบรรทัดใหม่เมื่อพื้นที่ไม่พอ */
+    gap: 20px; /* ระยะห่างระหว่างการ์ด */
+}
+
+/* การ์ดแต่ละใบ */
+.destination-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาเบาๆ */
+    overflow: hidden;
+    width: 300px; /* กำหนดความกว้างคงที่ของการ์ด */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-item:hover {
+    transform: translateY(-5px); /* ยกขึ้นเล็กน้อยเมื่อ hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* รูปภาพภายในการ์ด */
+.destination-item img {
+    width: 100%; /* ปรับความกว้างของรูปภาพให้เต็มการ์ด */
+    height: 180px; /* กำหนดความสูงของรูปภาพ */
+    object-fit: cover; /* ทำให้รูปภาพพอดีและไม่เสียสัดส่วน */
+    border-radius: 8px 8px 0 0; /* ขอบบนรูปภาพโค้งมน */
+}
+
+.destination-item h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.destination-item p {
+    color: #666;
+    font-size: 0.9rem;
+    padding: 0 10px 15px;
+}
